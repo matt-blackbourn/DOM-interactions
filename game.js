@@ -45,6 +45,14 @@ function updateCounts () {
   }
   
   // WRITE CODE HERE TO COUNT BLUE, GREEN, AND INVISIBLE DOTS
+  let blueDots = document.querySelectorAll(".blue")
+  totals.blue = blueDots.length
+
+  let greenDots = document.querySelectorAll(".green")
+  totals.green = greenDots.length
+
+  let invisibleDots = document.querySelectorAll(".invisible")
+  totals.invisible = invisibleDots.length
 
   // Once you've done the counting, this function will update the display
   displayTotals(totals)
