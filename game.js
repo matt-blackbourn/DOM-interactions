@@ -19,6 +19,9 @@ function bindEventListeners (dots) {
 
 function makeGreen (evt) {
   evt.preventDefault()
+   if(this.classList.contains("blue") || this.classList.contains("invisible")){
+     this.className = ""
+   }
   evt.target.classList.toggle('green')
   updateCounts()
 }
@@ -26,6 +29,9 @@ function makeGreen (evt) {
 // CREATE FUNCTION makeBlue HERE
 
 function makeBlue(e){
+   if(this.classList.contains("green") || this.classList.contains("invisible")){
+      this.className = ""
+    }
    e.target.classList.toggle("blue")
    updateCounts()
 }
@@ -33,6 +39,9 @@ function makeBlue(e){
 // CREATE FUNCTION hide HERE
 
 function hide(e){
+   if(this.classList.contains("blue") || this.classList.contains("green")){
+      this.className = ""
+    }
    e.target.classList.toggle("invisible")
    updateCounts()
 }
